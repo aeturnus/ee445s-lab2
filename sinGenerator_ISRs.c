@@ -33,7 +33,7 @@ float phase = 0;        /* signal's initial phase */
 float pi = 3.1415927;	/* value of pi */
 float phaseIncrement;   /* incremental phase */
 
-Int32 fs = 48000;       /* sample frequency */
+Int32 fs =  8000;       /* sample frequency */
 
 interrupt void Codec_ISR()
 ///////////////////////////////////////////////////////////////////////
