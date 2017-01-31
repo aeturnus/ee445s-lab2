@@ -10,8 +10,8 @@
 
 #include "DSP_Config.h"
 
-
+extern void Codec_ISR_Init(void);
 void StartUp()
 {
-	;
+	Codec_ISR_Init();
 }
