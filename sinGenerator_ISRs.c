@@ -27,8 +27,8 @@ volatile union {
 
 /* add any global variables here */
 float A = 32000;		/* signal's amplitude */
-float fDesired_l = 1000;  /* signal's frequency */
-float fDesired_r = 2000;  /* signal's frequency */
+float fDesired_l = 2000;  /* signal's frequency */
+float fDesired_r = 6000;  /* signal's frequency */
 float phase = 0;        /* signal's initial phase */
 
 float pi = 3.1415927;	/* value of pi */
@@ -47,7 +47,7 @@ void Codec_ISR_Init()
 	y_1_coeff_l = 2 * x_1_coeff_l;	// we only to compute once
 
 	x_1_coeff_r = cosf(2 * pi * fDesired_r/((float)fs));
-	y_1_coeff_r = 2 * x_1_coeff_l;	// we only to compute once
+	y_1_coeff_r = 2 * x_1_coeff_r;	// we only to compute once
 }
 
 interrupt void Codec_ISR()
